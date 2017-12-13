@@ -1,4 +1,5 @@
-FROM php:7.1.11-apache
+FROM php:7.1.12-apache
+MAINTAINER gizmotronic@gmail.com
 
 RUN apt-get update \
     && a2enmod rewrite \
