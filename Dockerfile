@@ -1,4 +1,4 @@
-FROM php:7.1.12-apache
+FROM php:7.1.13-apache
 MAINTAINER gizmotronic@gmail.com
 
 RUN apt-get update \
