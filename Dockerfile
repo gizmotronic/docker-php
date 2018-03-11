@@ -1,5 +1,5 @@
-FROM php:7.1.13-apache
-MAINTAINER gizmotronic@gmail.com
+FROM php:7.1.14-apache
+LABEL maintainer="gizmotronic@gmail.com"
 
 RUN apt-get update \
  && a2enmod rewrite \
