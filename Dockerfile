@@ -6,7 +6,6 @@ RUN apt-get update \
  && a2enmod dav \
  && a2enmod dav_fs \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
-        libmcrypt-dev \
         libpcre3-dev \
         mysql-client \
  && rm -rf /var/lib/apt/lists/*
@@ -21,7 +20,6 @@ RUN docker-php-source extract \
  && docker-php-ext-configure igbinary \
  && docker-php-ext-install -j$(nproc) \
         igbinary \
-        mcrypt \
         mysqli \
         opcache \
  && docker-php-ext-configure phpredis --enable-redis-igbinary \
