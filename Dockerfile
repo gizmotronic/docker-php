@@ -1,4 +1,4 @@
-FROM php:7.2.2-apache
+FROM php:7.2.3-apache
 MAINTAINER gizmotronic@gmail.com
 
 RUN apt-get update \
