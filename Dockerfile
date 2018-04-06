@@ -1,4 +1,4 @@
-FROM php:7.2.3-apache
+FROM php:7.2.4-apache
 LABEL maintainer="gizmotronic@gmail.com"
 
 RUN apt-get update \
