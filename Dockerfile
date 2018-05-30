@@ -1,4 +1,4 @@
-FROM php:7.2.4-apache
+FROM php:7.2.6-apache
 LABEL maintainer="gizmotronic@gmail.com"
 
 RUN apt-get update \
@@ -15,7 +15,7 @@ RUN docker-php-source extract \
  && curl -LsSo - "https://github.com/igbinary/igbinary/archive/master.tar.gz" | \
     tar -xzC /usr/src/php/ext/igbinary --strip 1 \
  && mkdir -p /usr/src/php/ext/phpredis \
- && curl -LsSo - "https://github.com/phpredis/phpredis/archive/3.1.4.tar.gz" | \
+ && curl -LsSo - "https://github.com/phpredis/phpredis/archive/4.0.2.tar.gz" | \
     tar -xzC /usr/src/php/ext/phpredis --strip 1 \
  && docker-php-ext-configure igbinary \
  && docker-php-ext-install -j$(nproc) \
