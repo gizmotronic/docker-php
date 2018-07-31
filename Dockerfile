@@ -8,9 +8,8 @@ RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
         libpcre3-dev \
         mysql-client \
- && rm -rf /var/lib/apt/lists/*
-
-RUN docker-php-source extract \
+ && rm -rf /var/lib/apt/lists/* \
+ && docker-php-source extract \
  && mkdir -p /usr/src/php/ext/igbinary \
  && curl -LsSo - "https://github.com/igbinary/igbinary/archive/master.tar.gz" | \
     tar -xzC /usr/src/php/ext/igbinary --strip 1 \
