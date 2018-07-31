@@ -27,6 +27,4 @@ RUN docker-php-source extract \
         phpredis \
  && docker-php-source delete
 
-VOLUME [ "/etc/apache2", "/var/www/html" ]
-
 EXPOSE 80
