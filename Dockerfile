@@ -22,6 +22,7 @@ RUN apt-get update \
         igbinary \
         mysqli \
         opcache \
+        sockets \
         zip \
  && docker-php-ext-configure phpredis --enable-redis-igbinary \
  && docker-php-ext-install -j$(nproc) \
